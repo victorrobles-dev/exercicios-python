@@ -1,0 +1,5 @@
+num = int(input('Digite um número: '))
+# print(f'O dobro de {num} é igual a {num*2}')
+# print(f'O triplo de {num} é igual a {num*3}')
+# print(f'A raiz quadrada de {num} é igual a {num**2}')
+print(f'O dobro de {num} é igual a {num*2}\n O triplo é igual a {num*3}\n E a raiz quadrada é igual a {num**2}')
