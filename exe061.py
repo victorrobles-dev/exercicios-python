@@ -2,10 +2,10 @@
 primeiro = int(input("Digite o primeiro termo: "))
 razao = int(input("Digite a razão: "))
 termo = primeiro
-contador = 1
+cont = 1
 
-while contador <= 10:
-    print(f"{termo} -> ", end='')
+while cont <= 10:
+    print(f"{termo} -> ", end="")
     termo += razao
-    contador += 1
-print(f"\033[32mFim!\033[0m")
+    cont += 1
+print("\033[32mFIM!\033[0m")
