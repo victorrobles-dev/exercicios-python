@@ -1,4 +1,3 @@
-
 num = int(input("Digite um número e vou dizer se é par ou ímpar: "))
 
 if num % 2 == 0:

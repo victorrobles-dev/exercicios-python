@@ -7,10 +7,10 @@ pagamento = int(input("""\033[0mInforme a condição de pagamento:
     [4] Em até 3x ou mais no cartão: 20% de juros\n"""))
 
 if pagamento == 1:
-    total = valor_produto * 0.1
+    total = valor_produto - (valor_produto * 0.10)
 
 elif pagamento == 2:
-    total = valor_produto * 0.05
+    total = valor_produto - (valor_produto * 0.05)
 
 elif pagamento == 3:
     total = valor_produto
@@ -26,4 +26,4 @@ else:
     total = valor_produto
     print("\033[31mOpção inválida! Tente novamente\033[0m")
 
-print(f"Sua compra de R$ {valor_produto:.2f} vai custar R$ {total:.2f} no final.")
+print(f"Sua compra de R$ {valor_produto:.2f} vai custar R$ \033[32m{total:.2f}\033[0m no final.")
