@@ -25,7 +25,7 @@ while True:
         break
 # Validação dos dados
 print("=-"*30)
-print("Cód", end="")
+print("Cód ", end="")
 for i in jogador.keys():
     print(f"{i:<15}", end="")
 print()
@@ -36,15 +36,16 @@ for k, v in enumerate(time):
         print(f"{str(d):<15}", end="")
     print()
 print("=-"*30)
-
-
-
-
-# for k, v in jogador.items():
-#     print(f"O campo {k} tem o valor \033[32m{v}\033[0m")
-# print("=-"*30)
-# print(f"O jogador {jogador["Nome"]} jogou {total} partidas.")
-# print("=-"*30)
-# for pos, i in enumerate(partidas):
-#     print(f"  => Na {pos+1}° partida, fez {i} gols.")
-# print(f"Seu saldo foi de {sum(jogador["Gols"])} gols.")
+while True:
+    consulta = int(input("Qual jogador deseja consultar? [999] para encerrar: "))
+    if consulta == 999:
+        break
+    if consulta >= len(time):
+        print(f"Erro! não existe jogador com código {consulta}")
+    else:
+        print(f" -> Levantamento do jogador \033[36m{time[consulta]["Nome"]}\033[0m: ")
+        print("-"*30)
+        for i, g in enumerate(time[consulta]["Gols"]):
+            print(f"    No {i+1}° jogo fez \033[32m{g}\033[0m gols!")
+    print("-"*30)
+print("Sistema encerrado")
