@@ -2,8 +2,21 @@
 from time import sleep
 
 def maior(*num):
-    print(f"Analisando os valores {num}")
-    print(f"{num} foram informados, {len(num)} valores ao todo")
-    print(f"O maior valor informado foi {max(num)}")
+    cont = maior = 0
+    print("\nAnalisando os valores...")
+    for valor in num:
+        print(f"{valor}", end=" ", flush=True)
+        sleep(0.5)
+        if cont == 0:
+            maior == valor
+        else:
+            if valor > maior:
+                maior = valor
+        cont += 1
+    print(f", Foram informados {cont} valores ao todo.")
+    print(f"O maior valor informado foi {maior}")
 
+# Programa principal
 maior(3,4,7)
+maior(9)
+maior(1,3)
